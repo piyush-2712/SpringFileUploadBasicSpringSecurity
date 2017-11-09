@@ -24,7 +24,14 @@ public class UploadController {
     @GetMapping("/")
     public String index() {
     	System.out.println("ushrihsihsrghndfdjfhbv");
-        return "uploadMulti";
+        return "admin";
+    }
+    
+    
+    @GetMapping("/admin")
+    public String index5() {
+    	System.out.println("ushrihsihsrghndfdjfhbv");
+        return "admin";
     }
     
     @GetMapping("/abcde")
@@ -116,5 +123,19 @@ public class UploadController {
     public String uploadMultiPage() {
         return "uploadMulti";
     }
+    
+    
+    @GetMapping("/login56")
+    public String loginPage(@RequestParam(value = "error", required = false) String error) {
+    	
+    	if (error != null) {
+			return "error";
+		}
+        return "login";
+    }
+    
+    
+    
+    
 
 }
